@@ -11,7 +11,7 @@
     <style>
       html
       {
-        background: url() no-repeat center center fixed;
+        background: url("http://unsplash.s3.amazonaws.com/batch%206/blurred_lines.jpeg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -23,18 +23,41 @@
         font-family: "Open Sans",serif;
         background: transparent;
       }
+
       h1 {
         font-family: "Abel", Arial, sans-serif;
         font-weight: 400;
-        font-size: 40px;
       }
+
+      h4 {
+        font-size: 14px;
+      }
+
+      section#title {
+        border-bottom: 1px solid #bbb;
+      }
+
+      section#message {
+        margin-top: 25px;
+      }
+
       /* Override B3 .panel adding a subtly transparent background */
       .panel {
-        /* background-color: rgba(255, 255, 255, 0.9); */
+        background-color: rgba(255, 255, 255, 0.9);
       }
+
+      #message {
+        text-align: center;
+      }
+
       .margin-base-vertical {
-        margin: 40px 0;
+        margin: 0px 0 10px 0;
       }
+
+      #me {
+        font-weight: bold;
+      }
+
       .announcement-bar {
         width: 100%;
         padding: 1px 0;
@@ -42,10 +65,7 @@
         color: #EEE;
         text-align: center;
       }
-      h4 {
-        font-size: 14px;
-        text-shadow: 0 1pt rgba(0, 0, 0, .5);
-      }
+
       .container {
         padding-top: 40px;
       }
@@ -53,27 +73,45 @@
   </head>
   <body>
     <div class="announcement-bar">
-      <h4>Brought to you by @mrmattnguyen and @basilksiddiqui</h4>
+      <p>Brought to you by @mrmattnguyen and @basilksiddiqui</p>
     </div>
 
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-offset-3 panel">
-          <h1 class="margin-base-vertical">PlayedBy.me</h1>
-          <p>Create a party, invite your friends, and press play. Let your guests do the rest </p>
+          <section id="title">
+            <h1 class="margin-base-vertical">PlayedBy.<strong>me<strong></h1>
+          </section>
+
+          <section id="message">
+            <h3 class="lead"><strong>Share. Vote. Discover.</strong></h3>
+            <p class="lead" id="message">Create playlists with your favorite music. Let your guests do the rest.</p>
+          </section>
+
           <form class="margin-base-vertical">
             <p class="input-group">
-            <span class="input-group-addon"><span class="icon-envelope"></span></span>
-            <input type="text" class="form-control input-large" name="email" placeholder="me@example.com" />
+              <span class="input-group-addon"><span class="icon-envelope"></span></span>
+              <input type="text" class="form-control input-large" name="email" placeholder="me@example.com" />
             </p>
+
             <p class="help-block text-center"><small>We won't send you spam. Unsubscribe at any time.</small></p>
+
             <p class="text-center">
-            <button type="submit" class="btn btn-success btn-large">Keep me posted</button>
+              <button type="submit" class="btn btn-success btn-large">Keep me posted</button>
             </p>
             </span>
           </form>
-        </div><!-- //main content -->
-      </div><!-- //row -->
+        </div> <!-- //main content -->
+      </div> <!-- //row -->
     </div> <!-- //container -->
+
+    <script type="text/javascript">
+      window.addEventListener("load",function() {
+        setTimeout(function(){
+          // Scroll straight to main content area
+            window.scrollTo(0, 85);
+          }, 0);
+      });
+    </script>
   </body>
 </html>
