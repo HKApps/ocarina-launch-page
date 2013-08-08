@@ -49,6 +49,7 @@ GEM
       atomic
     tilt (1.4.1)
     tzinfo (0.3.37)
+    validates_email_format_of (1.5.3)
 
 PLATFORMS
   ruby
@@ -62,3 +63,4 @@ DEPENDENCIES
   puma
   sinatra
   sinatra-activerecord
+  validates_email_format_of

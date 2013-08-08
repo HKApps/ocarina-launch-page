@@ -17,8 +17,10 @@ post "/" do
 
   lead = Lead.new(email: params[:email])
   if lead.save
+    status 201
     lead.to_json
   else
+    status 422
     lead.errors.to_json
   end
 end
