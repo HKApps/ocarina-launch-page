@@ -15,7 +15,7 @@ end
 post "/" do
   content_type :json
 
-  lead = Lead.new(email: params[:email])
+  lead = Lead.new(email: params[:email].downcase)
   if lead.save
     status 201
     lead.to_json
